@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-var velocity = Vector2.ZERO
 const MAX_SPEED = 5000
 const ACCELERATION = 180
 const FRICTION = 360
+var velocity = Vector2.ZERO
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
