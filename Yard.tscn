@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Gop/Gop.png" type="Texture" id=1]
+[ext_resource path="res://Gop/Gop.gd" type="Script" id=2]
+
+[node name="Yard" type="Node2D"]
+
+[node name="Gop" type="KinematicBody2D" parent="."]
+position = Vector2( 84.8365, 32.962 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Gop"]
+position = Vector2( 0.0561523, -0.28949 )
+scale = Vector2( 0.0713203, 0.0713202 )
+texture = ExtResource( 1 )
