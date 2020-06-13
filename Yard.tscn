@@ -1,18 +1,40 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Gop/Gop.png" type="Texture" id=1]
 [ext_resource path="res://Gop/Gop.gd" type="Script" id=2]
+[ext_resource path="res://World/Tree.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.34714
+height = 4.38496
 
 [node name="Yard" type="Node2D"]
 
 [node name="Gop" type="KinematicBody2D" parent="."]
-position = Vector2( 84.8365, 32.962 )
+position = Vector2( 82.0923, 40.2411 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Gop"]
-position = Vector2( 0.0561523, -0.28949 )
+position = Vector2( -0.101563, 0.0260925 )
 scale = Vector2( 0.0713203, 0.0713202 )
 texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gop"]
+position = Vector2( -0.438866, 7.86638 )
+rotation = -1.5708
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Tree" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 24.8555, 43.8102 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0.130768, 0.77336, 40.9981, 55.2632, 21.9984, 70.3195, 6.22502, 54.5462, 19.8475, 39.1313 )
