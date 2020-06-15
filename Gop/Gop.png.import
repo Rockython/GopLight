@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/4+cBTH4A.png-90a298d6db5d3aed893e54b2ef153725.stex"
+path="res://.import/Gop.png-f16c952f6f1e2156e4ed3fe8a80b468b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Goplight/4+cBTH4A.png"
-dest_files=[ "res://.import/4+cBTH4A.png-90a298d6db5d3aed893e54b2ef153725.stex" ]
+source_file="res://Gop/Gop.png"
+dest_files=[ "res://.import/Gop.png-f16c952f6f1e2156e4ed3fe8a80b468b.stex" ]
 
 [params]
 
