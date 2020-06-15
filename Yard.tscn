@@ -1,27 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Goplight/4+cBTH4A.png" type="Texture" id=1]
-[ext_resource path="res://Goplight/Gop.gd" type="Script" id=2]
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 0.595163
-height = 0.481251
+[ext_resource path="res://Goplight/Hero.tscn" type="PackedScene" id=1]
 
 [node name="Yard" type="Node2D"]
 
-[node name="Gop" type="KinematicBody2D" parent="."]
-position = Vector2( 38.0787, 17.0198 )
-script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="Gop"]
-position = Vector2( -0.0257568, -0.810638 )
-scale = Vector2( 0.0713203, 0.0713202 )
-texture = ExtResource( 1 )
-vframes = 21
-hframes = 13
-frame = 130
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gop"]
-position = Vector2( 0.0116005, 0.466476 )
-rotation = -1.5708
-shape = SubResource( 1 )
+[node name="Hero" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8.53522, 2.53395 )
