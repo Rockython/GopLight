@@ -18,5 +18,5 @@ func _physics_process(delta):
 		# velocity = velocity.clamped(MAX_SPEED * delta)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, delta * FRICTION)
-	move_and_collide(velocity * delta)
+	velocity = move_and_slide(velocity)
 
