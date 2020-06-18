@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const MAX_SPEED = 20
-const ACCELERATION = 100
-const FRICTION = 120
+const MAX_SPEED = 100
+const ACCELERATION = 1000
+const FRICTION = 1200
 
 var velocity = Vector2.ZERO
 
