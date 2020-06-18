@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/desert2/1.png" type="Texture" id=1]
+
+[node name="BrokenGround" type="Sprite"]
+scale = Vector2( 0.458333, 0.458333 )
+texture = ExtResource( 1 )
