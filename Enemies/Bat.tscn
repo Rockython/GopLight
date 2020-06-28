@@ -1,0 +1,119 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Enemies/МаX_Bat.png" type="Texture" id=1]
+[ext_resource path="res://Shadows/Max_Small.png" type="Texture" id=2]
+[ext_resource path="res://Hit_Hurt/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Bat.gd" type="Script" id=4]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Hit_Hurt/Hitbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Hit_Hurt/SoftCollision.tscn" type="PackedScene" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 32, 48 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Fly",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 1.74536
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 3.02979
+height = 1.85423
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 64.437
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 1.5089
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 1.4596
+
+[node name="Bat" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0585351, -0.0291004 )
+scale = Vector2( 0.187427, 0.175483 )
+frames = SubResource( 6 )
+animation = "Fly"
+frame = 2
+playing = true
+offset = Vector2( 0, -12 )
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+position = Vector2( 0.106247, -0.128935 )
+scale = Vector2( 0.233931, 0.233931 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0.0965176, -2.83117 )
+shape = SubResource( 8 )
+
+[node name="Stats" parent="." instance=ExtResource( 5 )]
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+modulate = Color( 1, 1, 1, 0.427451 )
+position = Vector2( 0.0479736, -0.229882 )
+shape = SubResource( 9 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 7 )]
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 0.0325232, -3.29701 )
+shape = SubResource( 10 )
+
+[node name="SoftCollision" parent="." instance=ExtResource( 8 )]
+
+[node name="CollisionShape2D" parent="SoftCollision" index="0"]
+position = Vector2( 0.275839, -3.17213 )
+shape = SubResource( 11 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
+
+[editable path="Hurtbox"]
+
+[editable path="PlayerDetectionZone"]
+
+[editable path="Hitbox"]
+
+[editable path="SoftCollision"]
