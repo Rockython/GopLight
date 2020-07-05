@@ -9,8 +9,8 @@
 [ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 0.881334
-height = 2.37985
+radius = 3.87977
+height = 12.684
 
 [sub_resource type="Animation" id=2]
 resource_name = "AttackDown"
@@ -710,12 +710,12 @@ graph_offset = Vector2( -52, -142 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
 [sub_resource type="CapsuleShape2D" id=46]
-radius = 3.1502
-height = 3.3952
+radius = 6.77106
+height = 9.3438
 
 [sub_resource type="CapsuleShape2D" id=47]
-radius = 2.4226
-height = 3.02943
+radius = 10.1354
+height = 13.8767
 
 [node name="Hero" type="KinematicBody2D"]
 position = Vector2( 0, -0.0213437 )
@@ -723,15 +723,14 @@ collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -6.5 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 0, -23.9787 )
 texture = ExtResource( 1 )
 vframes = 21
 hframes = 13
 frame = 105
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.157995, -0.118498 )
+position = Vector2( -0.187286, 0.302275 )
 rotation = -1.5708
 shape = SubResource( 1 )
 
@@ -775,7 +774,7 @@ collision_mask = 8
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/KnifeHitbox" index="0"]
-position = Vector2( 5.71455, -2.69211 )
+position = Vector2( 28.1476, -2.62397 )
 shape = SubResource( 46 )
 disabled = true
 
@@ -783,7 +782,7 @@ disabled = true
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( 0.19791, -3.95825 )
+position = Vector2( 0.437315, -11.1386 )
 shape = SubResource( 47 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -63,8 +63,8 @@ collision_layer = 16
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0.0585351, -0.0291004 )
-scale = Vector2( 0.187427, 0.175483 )
+position = Vector2( -2.38419e-07, 2 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 6 )
 animation = "Fly"
 frame = 2
@@ -92,7 +92,6 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 modulate = Color( 1, 1, 1, 0.427451 )
-position = Vector2( 0.0479736, -0.229882 )
 shape = SubResource( 9 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 7 )]
