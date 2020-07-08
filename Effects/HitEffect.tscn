@@ -23,8 +23,8 @@ animations = [ {
 } ]
 
 [node name="HitEffect" type="AnimatedSprite"]
-position = Vector2( 5.72205e-06, 0.0540023 )
-scale = Vector2( 0.338542, 0.338542 )
+position = Vector2( 0.0662174, -0.0784302 )
+scale = Vector2( 1.05037, 1.05037 )
 frames = SubResource( 3 )
 animation = "Animated"
 offset = Vector2( 0, -8 )

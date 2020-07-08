@@ -1,0 +1,279 @@
+[gd_scene load_steps=85 format=2]
+
+[ext_resource path="res://Enemies/ORC/Orc.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/pb_0.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/pb_1.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/ORC/walk/right/1.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/ORC/walk/right/2.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/ORC/walk/right/3.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/ORC/walk/right/4.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/ORC/walk/right/5.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/ORC/walk/right/6.png" type="Texture" id=9]
+[ext_resource path="res://Enemies/ORC/walk/right/7.png" type="Texture" id=10]
+[ext_resource path="res://Enemies/ORC/walk/right/8.png" type="Texture" id=11]
+[ext_resource path="res://Enemies/ORC/walk/right/9.png" type="Texture" id=12]
+[ext_resource path="res://Enemies/ORC/walk/left/1.png" type="Texture" id=13]
+[ext_resource path="res://Enemies/ORC/walk/left/2.png" type="Texture" id=14]
+[ext_resource path="res://Enemies/ORC/walk/left/3.png" type="Texture" id=15]
+[ext_resource path="res://Enemies/ORC/walk/left/4.png" type="Texture" id=16]
+[ext_resource path="res://Enemies/ORC/walk/left/5.png" type="Texture" id=17]
+[ext_resource path="res://Enemies/ORC/walk/left/6.png" type="Texture" id=18]
+[ext_resource path="res://Enemies/ORC/walk/left/7.png" type="Texture" id=19]
+[ext_resource path="res://Enemies/ORC/walk/left/8.png" type="Texture" id=20]
+[ext_resource path="res://Enemies/ORC/walk/left/9.png" type="Texture" id=21]
+[ext_resource path="res://Enemies/ORC/walk/up/1.png" type="Texture" id=22]
+[ext_resource path="res://Enemies/ORC/walk/up/2.png" type="Texture" id=23]
+[ext_resource path="res://Enemies/ORC/walk/up/3.png" type="Texture" id=24]
+[ext_resource path="res://Enemies/ORC/walk/up/4.png" type="Texture" id=25]
+[ext_resource path="res://Enemies/ORC/walk/up/5.png" type="Texture" id=26]
+[ext_resource path="res://Enemies/ORC/walk/up/6.png" type="Texture" id=27]
+[ext_resource path="res://Enemies/ORC/walk/up/7.png" type="Texture" id=28]
+[ext_resource path="res://Enemies/ORC/walk/up/8.png" type="Texture" id=29]
+[ext_resource path="res://Enemies/ORC/walk/up/9.png" type="Texture" id=30]
+[ext_resource path="res://Enemies/ORC/DeathCircle/2.png" type="Texture" id=31]
+[ext_resource path="res://Enemies/ORC/DeathCircle/3.png" type="Texture" id=32]
+[ext_resource path="res://Enemies/ORC/DeathCircle/4.png" type="Texture" id=33]
+[ext_resource path="res://Enemies/ORC/DeathCircle/5.png" type="Texture" id=34]
+[ext_resource path="res://Enemies/ORC/DeathCircle/6.png" type="Texture" id=35]
+[ext_resource path="res://Enemies/ORC/sword/left/1.png" type="Texture" id=36]
+[ext_resource path="res://Enemies/ORC/sword/left/2.png" type="Texture" id=37]
+[ext_resource path="res://Enemies/ORC/sword/left/3.png" type="Texture" id=38]
+[ext_resource path="res://Enemies/ORC/sword/left/4.png" type="Texture" id=39]
+[ext_resource path="res://Enemies/ORC/sword/left/5.png" type="Texture" id=40]
+[ext_resource path="res://Enemies/ORC/sword/left/6.png" type="Texture" id=41]
+[ext_resource path="res://Enemies/ORC/walk/down/1.png" type="Texture" id=42]
+[ext_resource path="res://Enemies/ORC/walk/down/2.png" type="Texture" id=43]
+[ext_resource path="res://Enemies/ORC/walk/down/3.png" type="Texture" id=44]
+[ext_resource path="res://Enemies/ORC/walk/down/4.png" type="Texture" id=45]
+[ext_resource path="res://Enemies/ORC/walk/down/5.png" type="Texture" id=46]
+[ext_resource path="res://Enemies/ORC/walk/down/6.png" type="Texture" id=47]
+[ext_resource path="res://Enemies/ORC/walk/down/7.png" type="Texture" id=48]
+[ext_resource path="res://Enemies/ORC/walk/down/8.png" type="Texture" id=49]
+[ext_resource path="res://Enemies/ORC/walk/down/9.png" type="Texture" id=50]
+[ext_resource path="res://Enemies/ORC/magic/up/1.png" type="Texture" id=51]
+[ext_resource path="res://Enemies/ORC/magic/up/2.png" type="Texture" id=52]
+[ext_resource path="res://Enemies/ORC/magic/up/3.png" type="Texture" id=53]
+[ext_resource path="res://Enemies/ORC/magic/up/4.png" type="Texture" id=54]
+[ext_resource path="res://Enemies/ORC/magic/up/5.png" type="Texture" id=55]
+[ext_resource path="res://Enemies/ORC/sword/right/1.png" type="Texture" id=56]
+[ext_resource path="res://Enemies/ORC/sword/right/2.png" type="Texture" id=57]
+[ext_resource path="res://Enemies/ORC/sword/right/3.png" type="Texture" id=58]
+[ext_resource path="res://Enemies/ORC/sword/right/4.png" type="Texture" id=59]
+[ext_resource path="res://Enemies/ORC/sword/right/5.png" type="Texture" id=60]
+[ext_resource path="res://Enemies/ORC/sword/right/6.png" type="Texture" id=61]
+[ext_resource path="res://Enemies/ORC/sword/down/1.png" type="Texture" id=62]
+[ext_resource path="res://Enemies/ORC/sword/down/2.png" type="Texture" id=63]
+[ext_resource path="res://Enemies/ORC/sword/down/3.png" type="Texture" id=64]
+[ext_resource path="res://Enemies/ORC/sword/down/4.png" type="Texture" id=65]
+[ext_resource path="res://Enemies/ORC/sword/down/5.png" type="Texture" id=66]
+[ext_resource path="res://Enemies/ORC/sword/down/6.png" type="Texture" id=67]
+[ext_resource path="res://Enemies/ORC/sword/up/1.png" type="Texture" id=68]
+[ext_resource path="res://Enemies/ORC/sword/up/2.png" type="Texture" id=69]
+[ext_resource path="res://Enemies/ORC/sword/up/3.png" type="Texture" id=70]
+[ext_resource path="res://Enemies/ORC/sword/up/4.png" type="Texture" id=71]
+[ext_resource path="res://Enemies/ORC/sword/up/5.png" type="Texture" id=72]
+[ext_resource path="res://Enemies/ORC/sword/up/6.png" type="Texture" id=73]
+[ext_resource path="res://Enemies/ORC/Orc Hurt.gd" type="Script" id=75]
+[ext_resource path="res://Enemies/ORC/AudioStreamPlayer2D.gd" type="Script" id=77]
+[ext_resource path="res://Enemies/ORC/Timer.gd" type="Script" id=78]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "left",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "right",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "back",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "leftat",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "stay_b",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
+"loop": true,
+"name": "rightat",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "forward",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "stay_r",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "stay_f",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "magicup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "backat",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "forwardat",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "stay_l",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "death",
+"speed": 6.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.7281
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 7.73219
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 240.0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 12, 28 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 12, 28 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 28, 12 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 28, 12 )
+
+[node name="Orc" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="TPHealth" type="TextureProgress" parent="."]
+margin_left = 24.0
+margin_top = -3.0
+margin_right = 28.0
+margin_bottom = 29.0
+max_value = 3.0
+value = 3.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrcAnimSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "back"
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( -4, 2 )
+shape = SubResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 4.93844, 15.6095 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DetectArea" type="Area2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DetectShape" type="CollisionShape2D" parent="DetectArea"]
+visible = false
+position = Vector2( 6.61584, 6.61584 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LeftAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftAttack"]
+position = Vector2( -30, 2 )
+shape = SubResource( 5 )
+
+[node name="RightAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightAttack"]
+position = Vector2( 22, 2 )
+shape = SubResource( 6 )
+
+[node name="UpperAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperAttack"]
+position = Vector2( -4, -33 )
+shape = SubResource( 7 )
+
+[node name="LowerAttack" type="Area2D" parent="."]
+position = Vector2( -0.11615, 0.513344 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerAttack"]
+position = Vector2( -4, 37 )
+shape = SubResource( 8 )
+
+[node name="OrcHurt" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.722
+script = ExtResource( 75 )
+
+[node name="OrcDed" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.722
+script = ExtResource( 77 )
+
+[node name="KnockbackTimer" type="Timer" parent="."]
+wait_time = 0.01
+
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource( 78 )
+
+[node name="LightningCharge" type="AudioStreamPlayer2D" parent="."]
+volume_db = -13.126
+[connection signal="animation_finished" from="OrcAnimSprite" to="." method="_on_OrcAnimSprite_animation_finished"]
+[connection signal="frame_changed" from="OrcAnimSprite" to="." method="_on_OrcAnimSprite_frame_changed"]
+[connection signal="body_shape_entered" from="DetectArea" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="DetectArea" to="." method="_on_Area2D_body_shape_exited"]
+[connection signal="area_shape_entered" from="LeftAttack" to="." method="_on_LeftAttack_area_shape_entered"]
+[connection signal="area_shape_exited" from="LeftAttack" to="." method="_on_LeftAttack_area_shape_exited"]
+[connection signal="area_shape_entered" from="RightAttack" to="." method="_on_RightAttack_area_shape_entered"]
+[connection signal="area_shape_exited" from="RightAttack" to="." method="_on_RightAttack_area_shape_exited"]
+[connection signal="area_shape_entered" from="UpperAttack" to="." method="_on_UpperAttack_area_shape_entered"]
+[connection signal="area_shape_exited" from="UpperAttack" to="." method="_on_UpperAttack_area_shape_exited"]
+[connection signal="area_shape_entered" from="LowerAttack" to="." method="_on_LowerAttack_area_shape_entered"]
+[connection signal="area_shape_exited" from="LowerAttack" to="." method="_on_LowerAttack_area_shape_exited"]
+[connection signal="finished" from="OrcDed" to="." method="_on_OrcDed_finished"]
+[connection signal="timeout" from="KnockbackTimer" to="." method="_on_KnockbackTimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

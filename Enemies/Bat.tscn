@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Enemies/МаX_Bat.png" type="Texture" id=1]
 [ext_resource path="res://Shadows/Max_Small.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Hit_Hurt/Hitbox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Hit_Hurt/SoftCollision.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -43,47 +44,48 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=7]
-radius = 1.74536
+radius = 4.99459
 
 [sub_resource type="CapsuleShape2D" id=8]
-radius = 3.02979
-height = 1.85423
+radius = 8.5553
+height = 5.67494
 
 [sub_resource type="CircleShape2D" id=9]
-radius = 64.437
+radius = 219.751
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 1.5089
+radius = 6.25168
 
 [sub_resource type="CircleShape2D" id=11]
-radius = 1.4596
+radius = 13.9675
 
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 16
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -2.38419e-07, 2 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 0.0992084, -0.30669 )
+scale = Vector2( 0.841043, 0.841043 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 0, -12 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
-position = Vector2( 0.106247, -0.128935 )
-scale = Vector2( 0.233931, 0.233931 )
+position = Vector2( 0.155853, 0.267923 )
+scale = Vector2( 0.556372, 0.556372 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.041855, -1.13461 )
 shape = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( 0.0965176, -2.83117 )
+position = Vector2( 1.48548, -16.3241 )
 shape = SubResource( 8 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
@@ -92,20 +94,23 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 modulate = Color( 1, 1, 1, 0.427451 )
+position = Vector2( -0.251205, 0.00165176 )
 shape = SubResource( 9 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 7 )]
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2( 0.0325232, -3.29701 )
+position = Vector2( 1.02463, -16.3931 )
 shape = SubResource( 10 )
 
 [node name="SoftCollision" parent="." instance=ExtResource( 8 )]
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
-position = Vector2( 0.275839, -3.17213 )
+position = Vector2( 0.473142, -16.4009 )
 shape = SubResource( 11 )
+
+[node name="WanderController" parent="." instance=ExtResource( 9 )]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 

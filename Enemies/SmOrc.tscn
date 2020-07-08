@@ -1,0 +1,229 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Enemies/OrcPODCASTER.png" type="Texture" id=1]
+[ext_resource path="res://Enemies/SmOrc.gd" type="Script" id=2]
+[ext_resource path="res://Hit_Hurt/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Hit_Hurt/Hitbox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Hit_Hurt/SoftCollision.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.76685
+height = 5.79364
+
+[sub_resource type="Animation" id=6]
+resource_name = "WalkDownSmOrc"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 130, 131, 132, 133, 134, 135, 136, 137, 138 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "WalkLeftSmOrc"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 117, 118, 119, 120, 121, 122, 123, 124, 125 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "WalkRightSmOrc"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 143, 144, 145, 146, 147, 148, 149, 150, 151 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "WalkUpSmOrc"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 104, 105, 106, 107, 108, 109, 110, 111, 112 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idleDownSmOrc"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 78 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idleLeftSmOrc"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 143 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idleRightSmOrc"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 143 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idleUpSmOrc"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 104 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 19.7403
+height = 29.6359
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 195.241
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 16.2597
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 10.4456
+
+[node name="SmOrc" type="KinematicBody2D"]
+collision_layer = 32
+collision_mask = 32
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.279408, 0.0951648 )
+scale = Vector2( 1.2298, 1.2298 )
+texture = ExtResource( 1 )
+vframes = 21
+hframes = 13
+frame = 143
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.55899, 32.6587 )
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/WalkDownSmOrc = SubResource( 6 )
+anims/WalkLeftSmOrc = SubResource( 8 )
+anims/WalkRightSmOrc = SubResource( 9 )
+anims/WalkUpSmOrc = SubResource( 7 )
+anims/idleDownSmOrc = SubResource( 2 )
+anims/idleLeftSmOrc = SubResource( 3 )
+anims/idleRightSmOrc = SubResource( 4 )
+anims/idleUpSmOrc = SubResource( 5 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -0.875443, 7.63482 )
+shape = SubResource( 10 )
+
+[node name="Stats" parent="." instance=ExtResource( 4 )]
+max_health = 4
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 5 )]
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+position = Vector2( -0.540527, 1.46672 )
+shape = SubResource( 11 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 6 )]
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 0.493752, 10.7603 )
+shape = SubResource( 12 )
+
+[node name="SoftCollision" parent="." instance=ExtResource( 7 )]
+
+[node name="CollisionShape2D" parent="SoftCollision" index="0"]
+position = Vector2( 0.749168, 29.7788 )
+shape = SubResource( 13 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
+
+[editable path="Hurtbox"]
+
+[editable path="PlayerDetectionZone"]
+
+[editable path="Hitbox"]
+
+[editable path="SoftCollision"]
