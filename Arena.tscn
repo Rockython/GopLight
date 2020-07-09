@@ -1,0 +1,300 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Enemies/OrcPODCASTER.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "AttackDown"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 79, 80, 81, 82, 83, 84, 85, 78 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "AttackLeft"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 66, 67, 68, 69, 70, 71, 72, 65 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "AttackRight"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 92, 93, 94, 95, 96, 97, 98, 91 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "AttackUp"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 53, 54, 55, 56, 57, 58, 59, 52 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 130 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 117 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 143 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "IdleUp"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 104 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "MagicDown"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 27, 28, 29, 30, 31, 32, 26 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "MagicLeft"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 14, 15, 16, 17, 18, 19, 13 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "MagicRight"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 40, 41, 42, 43, 44, 45, 39 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "MagicUp"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "MoveDown"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 131, 132, 133, 134, 135, 136, 137, 138 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "MoveLeft"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 118, 119, 120, 121, 122, 123, 124, 125 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "MoveRight"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 144, 145, 146, 147, 148, 149, 150, 151 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "MoveUp"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 105, 106, 107, 108, 109, 110, 111, 112 ]
+}
+
+[node name="Arena" type="Node2D"]
+
+[node name="OrcPodcaster" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="OrcPodcaster"]
+texture = ExtResource( 1 )
+vframes = 21
+hframes = 13
+frame = 40
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OrcPodcaster"]
+anims/AttackDown = SubResource( 1 )
+anims/AttackLeft = SubResource( 2 )
+anims/AttackRight = SubResource( 3 )
+anims/AttackUp = SubResource( 4 )
+anims/IdleDown = SubResource( 5 )
+anims/IdleLeft = SubResource( 6 )
+anims/IdleRight = SubResource( 7 )
+anims/IdleUp = SubResource( 8 )
+anims/MagicDown = SubResource( 13 )
+anims/MagicLeft = SubResource( 14 )
+anims/MagicRight = SubResource( 15 )
+anims/MagicUp = SubResource( 16 )
+anims/MoveDown = SubResource( 9 )
+anims/MoveLeft = SubResource( 10 )
+anims/MoveRight = SubResource( 11 )
+anims/MoveUp = SubResource( 12 )
+
+[node name="Floor" type="Sprite" parent="."]
